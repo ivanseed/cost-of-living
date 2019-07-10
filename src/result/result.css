@@ -1,0 +1,23 @@
+.result-img {
+    height: 100px;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.salary-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 60px;
+}
+
+.salary-info__result {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.primary-btn--result {
+    margin-bottom: 30px;
+}

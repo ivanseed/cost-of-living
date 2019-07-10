@@ -1,25 +1,119 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useMemo } from 'react';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+
+import EditHome from './edit-home/edit-home';
+import EditSalary from './edit-salary/edit-salary';
+import EditAway from './edit-destination/edit-destination';
+import Result from './result/result';
+
+import data from './data/cities.json';
+
+import numbeo from './numbeo.svg';
+
 import './App.css';
 
+function useCity(initialValue) {
+  const [value, setValue] = useState(initialValue);
+
+  function handleChange(e) {
+    setValue(e.value);
+  }
+
+  return {
+    value,
+    onChange: handleChange,
+  };
+}
+
 function App() {
+  const [cities] = useState(data);
+  const [salary, updateSalary] = useState('');
+  const [currency, updateCurrency] = useState('£');
+  const home = useCity(null);
+  const away = useCity(null);
+
+  const options = useMemo(
+    () =>
+      cities.map((city, itr) => ({
+        label: city[0],
+        value: itr,
+      })),
+    [cities]
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <div className="content">
+          <Route
+            path="/"
+            exact
+            render={() => <EditHome options={options} {...home} />}
+          />
+          <Route
+            path="/add-salary"
+            exact
+            render={() =>
+              home.value === null ? (
+                <Redirect to="/" />
+              ) : (
+                <EditSalary
+                  salary={salary}
+                  currency={currency}
+                  updateSalary={updateSalary}
+                  updateCurrency={updateCurrency}
+                />
+              )
+            }
+          />
+          <Route
+            path="/choose-destination"
+            exact
+            render={() =>
+              !salary ? (
+                <Redirect to="/" />
+              ) : (
+                <EditAway
+                  options={options}
+                  home={cities[home.value]}
+                  {...away}
+                />
+              )
+            }
+          />
+          <Route
+            path="/result"
+            exact
+            render={() =>
+              away.value === null ? (
+                <Redirect to="/" />
+              ) : (
+                <Result
+                  home={cities[home.value]}
+                  away={cities[away.value]}
+                  salary={salary}
+                  currency={currency}
+                />
+              )
+            }
+          />
+        </div>
+        <div className="footer">
+          <img className="numbeo-logo" src={numbeo} alt="" />
+          <span>
+            Data powered by{' '}
+            <a
+              href="https://numbeo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Numbeo
+            </a>
+            . Last updated July 2019
+          </span>
+        </div>
+      </div>
+    </Router>
   );
 }
 

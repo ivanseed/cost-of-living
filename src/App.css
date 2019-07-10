@@ -1,33 +1,61 @@
-.App {
-  text-align: center;
-}
+.app {
+  background: #36D1DC;
+  background: -webkit-linear-gradient(to bottom, #5B86E5, #36D1DC);
+  background: linear-gradient(to bottom, #5B86E5, #36D1DC);
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  font-family: 'Open Sans', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.pane {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  min-height: 500px;
+  max-width: 450px;
+
+  width: 90vw;
+
+  background: white;
+
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(154,160,185,.1), 0 15px 40px rgba(166,173,201,.2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #404040;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin: 0 10px 5px 10px;
+}
+
+.numbeo-logo {
+  height: 20px;
+  margin-right: 5px;
+}
+
+span {
+  color: #202E42;
 }
