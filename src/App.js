@@ -58,7 +58,7 @@ function App() {
             exact
             render={() =>
               home.value === null ? (
-                <Redirect to="/" />
+                <Redirect to={URI_PREFIX} />
               ) : (
                 <EditSalary
                   salary={salary}
@@ -74,7 +74,7 @@ function App() {
             exact
             render={() =>
               !salary ? (
-                <Redirect to="/" />
+                <Redirect to={URI_PREFIX} />
               ) : (
                 <EditAway
                   options={options}
@@ -89,7 +89,7 @@ function App() {
             exact
             render={() =>
               away.value === null ? (
-                <Redirect to="/" />
+                <Redirect to={URI_PREFIX} />
               ) : (
                 <Result
                   home={cities[home.value]}
