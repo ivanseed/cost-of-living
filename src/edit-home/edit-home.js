@@ -20,7 +20,7 @@ function EditHome({ options, onChange, value }) {
       <h2>Select your home city</h2>
       <CitySelector options={options} onChange={onChange} value={value} />
       <Button
-        link="/add-salary"
+        link="/cost-of-living/add-salary"
         isDisabled={isDisabled}
         text="Next"
         className="primary-btn"

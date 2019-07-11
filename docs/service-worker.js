@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cost-of-living/precache-manifest.883e2922887fc5b8d1847c585712622e.js"
+  "/cost-of-living/precache-manifest.9a034750313d087e320f205f595250ef.js"
 );
 
 self.addEventListener('message', (event) => {

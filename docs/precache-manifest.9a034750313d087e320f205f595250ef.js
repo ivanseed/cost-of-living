@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6d1356512390bec6d7bb183a0c7baa50",
+    "revision": "bbc80f9a2daecfc2bd31760a75154587",
     "url": "/cost-of-living/index.html"
   },
   {
-    "revision": "f2c442dccfa90c24eb0f",
+    "revision": "00865b30f5930f991683",
     "url": "/cost-of-living/static/css/main.d8ee69fe.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cost-of-living/static/js/2.6be6438e.chunk.js"
   },
   {
-    "revision": "f2c442dccfa90c24eb0f",
-    "url": "/cost-of-living/static/js/main.56c3f342.chunk.js"
+    "revision": "00865b30f5930f991683",
+    "url": "/cost-of-living/static/js/main.af3f9032.chunk.js"
   },
   {
     "revision": "f46482c2376c0fd1ef6e",
