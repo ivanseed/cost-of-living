@@ -40,13 +40,13 @@ function EditSalary({ salary, updateSalary, currency, updateCurrency }) {
         />
       </div>
       <Button
-        link="/cost-of-living/choose-destination"
+        link="/choose-destination"
         isDisabled={isDisabled}
         text="Next"
         className="primary-btn"
       />
       <Button
-        link="/cost-of-living"
+        link="/"
         isDisabled={false}
         text="Previous"
         className="secondary-btn"

@@ -12,10 +12,7 @@ import numbeo from './numbeo.svg';
 
 import './App.css';
 
-// Temp fix till hosted on dedicated site
-const URI_PREFIX = "/cost-of-living";
-
-  function useCity(initialValue) {
+function useCity(initialValue) {
   const [value, setValue] = useState(initialValue);
 
   function handleChange(e) {
@@ -49,16 +46,16 @@ function App() {
       <div className="app">
         <div className="content">
           <Route
-            path={`${URI_PREFIX}/`}
+            path="/"
             exact
             render={() => <EditHome options={options} {...home} />}
           />
           <Route
-            path={`${URI_PREFIX}/add-salary`}
+            path="/add-salary"
             exact
             render={() =>
               home.value === null ? (
-                <Redirect to={URI_PREFIX} />
+                <Redirect to="/" />
               ) : (
                 <EditSalary
                   salary={salary}
@@ -70,11 +67,11 @@ function App() {
             }
           />
           <Route
-            path={`${URI_PREFIX}/choose-destination`}
+            path="/choose-destination"
             exact
             render={() =>
               !salary ? (
-                <Redirect to={URI_PREFIX} />
+                <Redirect to="/" />
               ) : (
                 <EditAway
                   options={options}
@@ -85,11 +82,11 @@ function App() {
             }
           />
           <Route
-            path={`${URI_PREFIX}/result`}
+            path="/result"
             exact
             render={() =>
               away.value === null ? (
-                <Redirect to={URI_PREFIX} />
+                <Redirect to="/" />
               ) : (
                 <Result
                   home={cities[home.value]}

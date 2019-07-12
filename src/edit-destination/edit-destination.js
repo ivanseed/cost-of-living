@@ -22,13 +22,13 @@ function EditDestination({ options, onChange, value, home }) {
       <h2>{`Compare ${homeCity} with`}</h2>
       <CitySelector options={options} onChange={onChange} value={value} />
       <Button
-        link="/cost-of-living/result"
+        link="/result"
         isDisabled={isDisabled}
         text="Results"
         className="primary-btn"
       />
       <Button
-        link="/cost-of-living/add-salary"
+        link="/add-salary"
         isDisabled={false}
         text="Previous"
         className="secondary-btn"

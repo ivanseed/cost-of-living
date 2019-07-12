@@ -73,7 +73,7 @@ function Result({ home, away, salary, currency }) {
       </div>
 
       <Button
-        link="/cost-of-living"
+        link="/"
         isDisabled={false}
         text="Edit Details"
         className="primary-btn primary-btn--result"
