@@ -1,14 +1,16 @@
 import React, { useState, useMemo } from 'react';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
-import EditHome from './edit-home/edit-home';
-import EditSalary from './edit-salary/edit-salary';
-import EditAway from './edit-destination/edit-destination';
-import Result from './result/result';
+import EditHome from './components/edit-home/edit-home';
+import EditSalary from './components/edit-salary/edit-salary';
+import EditAway from './components/edit-destination/edit-destination';
+import Result from './components/result/result';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import Home from './components/home/home';
+import Disclaimer from './components/disclaimer/disclaimer';
 
 import data from './data/cities.json';
-
-import numbeo from './numbeo.svg';
 
 import './App.css';
 
@@ -44,9 +46,12 @@ function App() {
   return (
     <Router>
       <div className="app">
+        <Header />
         <div className="content">
+          <Route path="/" exact component={Home} />
+          <Route path="/disclaimer" exact component={Disclaimer} />
           <Route
-            path="/"
+            path="/choose-home"
             exact
             render={() => <EditHome options={options} {...home} />}
           />
@@ -98,20 +103,7 @@ function App() {
             }
           />
         </div>
-        <div className="footer">
-          <img className="numbeo-logo" src={numbeo} alt="" />
-          <span>
-            Data powered by{' '}
-            <a
-              href="https://numbeo.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Numbeo
-            </a>
-            . Last updated July 2019
-          </span>
-        </div>
+        <Footer />
       </div>
     </Router>
   );

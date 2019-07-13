@@ -27,11 +27,15 @@ button {
     font-size: 15px;
     font-weight: bold;
     color: white;
+
+    box-shadow: 0 6px 14px 0 rgba(255, 143, 97, 0.3), 0 1px 3px rgba(255, 143, 97, 0.3);
 }
 
 .primary-btn:hover {
     cursor: pointer;
     transform: scale(1.1);
+
+    background: linear-gradient(to right, #ff956b , #ffb86b);;
 }
 
 .primary-btn[disabled] {

@@ -2,7 +2,8 @@ import React from 'react';
 
 import Button from '../button/button';
 import Comparison from '../comparison/comparison';
-import CalculatePercentage from '../helpers/calculate-percentage';
+import CalculatePercentage from '../../helpers/calculate-percentage';
+import CalculateAdjective from '../../helpers/calculate-adjective';
 
 import rent from './rent.svg';
 import restaurant from './restaurant.svg';
@@ -10,20 +11,6 @@ import groceries from './groceries.svg';
 import shopping from './shopping.svg';
 
 import './result.css';
-
-function calculateAdjective(x, y) {
-  const z = CalculatePercentage(y, x);
-
-  if (z > 3) {
-    return 'more expensive';
-  }
-
-  if (z < -3) {
-    return 'less expensive';
-  }
-
-  return 'about the same';
-}
 
 function Result({ home, away, salary, currency }) {
   const [
@@ -73,7 +60,7 @@ function Result({ home, away, salary, currency }) {
       </div>
 
       <Button
-        link="/"
+        link="/choose-home"
         isDisabled={false}
         text="Edit Details"
         className="primary-btn primary-btn--result"
@@ -88,7 +75,7 @@ function Result({ home, away, salary, currency }) {
         awayEx={`${awayRentExample}pcm`}
         img={rent}
         heading="Rent"
-        snippet={`Rent in ${formattedAway} is ${calculateAdjective(
+        snippet={`Rent in ${formattedAway} is ${CalculateAdjective(
           900,
           awayRentExample
         )} compared to ${formattedHome}. A ${currency}900pcm property in ${formattedHome} would cost around ${currency}${awayRentExample}pcm in ${formattedAway}`}
@@ -103,7 +90,7 @@ function Result({ home, away, salary, currency }) {
         awayEx={`${currency}${awayGroceriesExample}`}
         img={groceries}
         heading="Groceries"
-        snippet={`Buying groceries in ${formattedAway} is ${calculateAdjective(
+        snippet={`Buying groceries in ${formattedAway} is ${CalculateAdjective(
           40,
           awayGroceriesExample
         )} compared to ${formattedHome}. A ${currency}40 shop in ${formattedHome} would cost around ${currency}${awayGroceriesExample} in ${formattedAway}`}
@@ -118,7 +105,7 @@ function Result({ home, away, salary, currency }) {
         awayEx={`${currency}${awayRestaurantExample}`}
         img={restaurant}
         heading="Eating out"
-        snippet={`Eating out in ${formattedAway} is ${calculateAdjective(
+        snippet={`Eating out in ${formattedAway} is ${CalculateAdjective(
           60,
           awayRestaurantExample
         )} compared to ${formattedHome}. A ${currency}60 meal out ${formattedHome} would cost around ${currency}${awayRestaurantExample} in ${formattedAway}`}

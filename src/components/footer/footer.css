@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90vw;
+    max-width: 650px;
+
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.numbeo-logo {
+    height: 20px;
+    margin-right: 5px;
+}

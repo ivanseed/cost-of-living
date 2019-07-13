@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CalculatePercentage from '../helpers/calculate-percentage';
+import CalculatePercentage from '../../helpers/calculate-percentage';
 
 import './comparison.css';
 
@@ -17,17 +17,18 @@ function renderExample(city, example) {
   );
 }
 
-function Comparison({
-  home,
-  away,
-  homeValue,
-  awayValue,
-  homeEx,
-  awayEx,
-  img,
-  heading,
-  snippet,
-}) {
+function Comparison(props) {
+  const {
+    home,
+    away,
+    homeValue,
+    awayValue,
+    homeEx,
+    awayEx,
+    img,
+    heading,
+    snippet,
+  } = props;
   const percentage = CalculatePercentage(awayValue, homeValue);
 
   return (

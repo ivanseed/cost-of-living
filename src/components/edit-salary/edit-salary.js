@@ -46,7 +46,7 @@ function EditSalary({ salary, updateSalary, currency, updateCurrency }) {
         className="primary-btn"
       />
       <Button
-        link="/"
+        link="/choose-home"
         isDisabled={false}
         text="Previous"
         className="secondary-btn"
