@@ -2,6 +2,7 @@
 Cost of living calculator React app which allows for comparison of cities.
 
 Find the app here:
+
 https://movingplaces.io
 
 ## Running locally
@@ -39,7 +40,9 @@ npm run build
 ```
 
 ## Data
-Powered by [Numbeo](https://numbeo.com). See [generate-cities.js](generate-cities.js) script to see how I scrape the data.
+Powered by [Numbeo](https://numbeo.com).
+
+See [generate-cities.js](generate-cities.js) script to see how I scrape the data.
 
 ## License
 [MIT](LICENSE.md)

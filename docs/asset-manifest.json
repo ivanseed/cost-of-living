@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b8c11ab7.chunk.css",
+    "main.css": "/static/css/main.9c68c2e8.chunk.css",
     "main.js": "/static/js/main.a694abc0.chunk.js",
     "main.js.map": "/static/js/main.a694abc0.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
@@ -8,9 +8,9 @@
     "static/js/2.a7aba544.chunk.js": "/static/js/2.a7aba544.chunk.js",
     "static/js/2.a7aba544.chunk.js.map": "/static/js/2.a7aba544.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2fa5ce397e63d5e7ef48c27e9ca938bf.js": "/precache-manifest.2fa5ce397e63d5e7ef48c27e9ca938bf.js",
+    "precache-manifest.a512e5dde2830a5899d899265fada0ac.js": "/precache-manifest.a512e5dde2830a5899d899265fada0ac.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.b8c11ab7.chunk.css.map": "/static/css/main.b8c11ab7.chunk.css.map",
+    "static/css/main.9c68c2e8.chunk.css.map": "/static/css/main.9c68c2e8.chunk.css.map",
     "static/media/city.svg": "/static/media/city.8fd61a65.svg",
     "static/media/compare.svg": "/static/media/compare.1696cdac.svg",
     "static/media/groceries.svg": "/static/media/groceries.8ce7f37c.svg",

@@ -1,19 +1,19 @@
 .header {
     max-width: 650px;
     width: 90vw;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 15px;
 }
 
 .header-logo {
     font-size: 30px;
     font-weight: bold;
-    color: white;
     letter-spacing: -1px;
 }
 
 .header-logo__text {
     text-decoration: none;
+    color: white;
 }
 
 .header-logo__text:visited {
