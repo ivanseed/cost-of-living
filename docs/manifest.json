@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "movingplaces",
+  "name": "movingplaces - Cost of Living comparison app",
   "icons": [
     {
       "src": "favicon.ico",

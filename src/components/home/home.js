@@ -26,15 +26,15 @@ function Home() {
       <div className="home-info">
         <img className="compare-img" src={compare} alt="Compare" />
         <span className="home-info__text">
-          Find out the difference in salary, rent, groceries, eating out, and
-          purchasing power
+          Compare cities and see how much you'd need to earn to maintain the
+          same standard of living
         </span>
       </div>
       <div className="home-info">
         <img className="secure-img" src={secure} alt="Secure" />
         <span className="home-info__text">
           Privacy is important to all of us, that is why we don't collect or
-          track any of the data you submit
+          track any of the data you enter
         </span>
       </div>
       <div className="home-info">
